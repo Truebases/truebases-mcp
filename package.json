@@ -1,0 +1,45 @@
+{
+  "name": "truebases-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for TrueBases — Search investors, grants, accelerators, programs, and startup jobs via AI agents.",
+  "main": "dist/index.js",
+  "bin": {
+    "truebases-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "truebases",
+    "investors",
+    "startup",
+    "vc",
+    "grants",
+    "accelerators",
+    "ai-agents"
+  ],
+  "author": "TrueBases",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "zod": "^3.25.56"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}
