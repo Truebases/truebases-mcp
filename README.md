@@ -1,10 +1,10 @@
 # TrueBases MCP Server
 
-An open-source [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that gives AI agents access to TrueBases startup data — investors, grants, accelerators, programs, and jobs.
+An open-source [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that gives AI agents access to TrueBases data intelligence.
 
-> **What is TrueBases?** [TrueBases](https://www.truebases.com) is the data intelligence platform.
+> **What is TrueBases?** [TrueBases](https://www.truebases.com) is the data intelligence platform. We help teams to find opportunities, track market activity, and make better decisions using real-time data from across the internet.
 
-## 🚀 What can agents do with this?
+## What can agents do with this?
 
 Ask your AI assistant things like:
 - *"Find me seed investors in climate tech"*
@@ -17,7 +17,7 @@ The agent calls TrueBases MCP tools under the hood and returns real data.
 
 ---
 
-## 📦 Available Tools
+## Available Tools
 
 | Tool | Description |
 |---|---|
@@ -35,23 +35,21 @@ The agent calls TrueBases MCP tools under the hood and returns real data.
 
 Request an API key at [truebases.com](https://www.truebases.com) (or email the team).
 
-### 2. Install
+### 2. Install / Run
 
-```bash
-npm install -g truebases-mcp
-```
+You can run the server directly via `npx` (recommended) or install it globally.
 
-### 3. Configure Your AI Client
+#### Run with `npx` (No installation required)
 
-#### Claude Desktop
-
+**Claude Desktop Configuration:**
 Add to your `claude_desktop_config.json`:
 
 ```json
 {
   "mcpServers": {
     "truebases": {
-      "command": "truebases-mcp",
+      "command": "npx",
+      "args": ["-y", "truebases-mcp"],
       "env": {
         "TRUEBASES_API_KEY": "your-api-key-here"
       }
@@ -60,10 +58,22 @@ Add to your `claude_desktop_config.json`:
 }
 ```
 
-#### Cursor
+**Cursor Configuration:**
+Add a new MCP server in Cursor settings:
+* **Name**: truebases
+* **Type**: command
+* **Command**: `npx -y truebases-mcp`
+* **Environment Variables**: `TRUEBASES_API_KEY=your-api-key-here`
 
-Add to your `.cursor/mcp.json`:
+---
 
+#### Install globally (Alternative)
+
+```bash
+npm install -g truebases-mcp
+```
+
+**Claude Desktop Configuration:**
 ```json
 {
   "mcpServers": {
@@ -75,14 +85,6 @@ Add to your `.cursor/mcp.json`:
     }
   }
 }
-```
-
-#### Windsurf / Other MCP Clients
-
-Use the same pattern — the server runs on **stdio** transport:
-
-```bash
-TRUEBASES_API_KEY=your-key truebases-mcp
 ```
 
 ---
@@ -96,11 +98,11 @@ TRUEBASES_API_KEY=your-key truebases-mcp
 
 ---
 
-## 🛠️ Development
+## Development
 
 ```bash
 # Clone
-git clone https://github.com/truebases/truebases-mcp.git
+git clone https://github.com/Truebases/truebases-mcp.git
 cd truebases-mcp
 
 # Install
@@ -118,7 +120,7 @@ TRUEBASES_API_KEY=your-key npm start
 
 ---
 
-## 📖 Tool Reference
+## Tool Reference
 
 ### `search_investors`
 
@@ -185,10 +187,10 @@ Find startup and tech company jobs.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 PRs welcome! Please open an issue first for major changes.
 
-## 📄 License
+## License
 
 [MIT](LICENSE) — Built with ❤️ by [TrueBases](https://www.truebases.com)

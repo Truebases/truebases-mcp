@@ -1,8 +1,14 @@
 {
   "name": "truebases-mcp",
-  "version": "1.0.0",
-  "description": "MCP server for TrueBases — Search investors, grants, accelerators, programs, and startup jobs via AI agents.",
+  "version": "1.0.2",
+  "mcpName": "io.github.Truebases/truebases-mcp",
+  "description": "MCP server for TrueBases. Find opportunities, track market activity, discover business signals, and make better decisions using real-time data from across the internet.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Truebases/truebases-mcp.git"
+  },
   "main": "dist/index.js",
+
   "bin": {
     "truebases-mcp": "dist/index.js"
   },
@@ -13,15 +19,30 @@
     "prepublishOnly": "npm run build"
   },
   "keywords": [
-    "mcp",
-    "model-context-protocol",
     "truebases",
     "investors",
     "startup",
     "vc",
     "grants",
     "accelerators",
-    "ai-agents"
+    "ai-agents",
+    "market-intelligence",
+    "business-signals",
+    "real-time-data",
+    "lead-generation",
+    "b2b",
+    "funding",
+    "incubators",
+    "jobs",
+    "search",
+    "market-research",
+    "company-intelligence",
+    "deals",
+    "signals",
+    "investor-database",
+    "venture-capital",
+    "tech-jobs",
+    "startup-funding"
   ],
   "author": "TrueBases",
   "license": "MIT",
